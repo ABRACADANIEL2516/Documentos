@@ -1,0 +1,30 @@
+//Pruebas para las rutas de categorias
+
+###
+POST http://localhost:5000/api/mark HTTP/1.1
+content-Type: application/json
+
+{    
+    "nombre":"MATCHBOX",
+    "imagen":"http://example.com/imagenMatch2.jpg",
+    "categories":[1]
+}
+
+###
+GET http://localhost:5000/api/mark HTTP/1.1
+
+### 
+GET http://localhost:5000/api/mark/672d7deae824308f6d4904c7 HTTP/1.1
+
+###
+GET http://localhost:5000/api/mark/672d7deae824308f6d4904c7/categories HTTP/1.1
+
+###
+PUT http://localhost:5000/api/mark/672d7f11e824308f6d4904ca HTTP/1.1
+Content-Type: application/json
+
+{    
+    "nombre": "MATCHBOX",
+    "imagen": "http://example.com/imagenMatch2.jpg",
+    "categories": ["672d81b90b6af0e8aaf38a34"]
+}
